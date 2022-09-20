@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  catagoroy: MyString
+  price: 1
+  discount: 9.99
+  discount_type: MyString
+  catagory: one
+
+two:
+  name: MyString
+  catagoroy: MyString
+  price: 1
+  discount: 9.99
+  discount_type: MyString
+  catagory: two

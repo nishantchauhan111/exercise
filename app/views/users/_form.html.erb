@@ -1,0 +1,58 @@
+<%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+
+    <%= form.check_box :male %>
+    <%= form.label :male, "male" %>
+    <%= form.check_box :female %>
+    <%= form.label :female, "female" %>
+    <%= form.check_box :other %>
+    <%= form.label :other, "other" %>
+  </div>
+
+  <div>
+    <%= form.label :age, style: "display: block" %>
+    <%= form.number_field :age %>
+
+    <%= form.radio_button :age, "child" %>
+    <%= form.label :age_child, "I am under 18" %>
+    <%= form.radio_button :age, "adult" %>
+    <%= form.label :age_adult, "I am over 18" %>
+  </div>
+
+  <div>
+    <%= form.label :Date_of_birth, style: "display: block" %>
+    <%= form.date_field :birth_date %>
+  </div>
+
+  <div>
+    <%= form.label :number, style: "display: block" %>
+    <%= form.telephone_field :number %> 
+  </div>
+
+  <div>
+    <%= form.label :image, style: "display: block" %>
+    <%= form.text_field :image %>
+  </div>
+
+  <div>
+    <%=form.label :address, style: "display: block"%>
+    <%=form.text_area :message, size: "70x5" %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
