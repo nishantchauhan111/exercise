@@ -1,0 +1,58 @@
+
+
+
+<h1>Student data</h1>
+ <div>
+    <table border= '2' style ="text-align :center">
+      <tr>
+       <th >Student name</th>
+        <th >Roll no</th>
+        <th >maths</th>
+        <th >science</th>
+        <th >social sic.</th>
+        <th >Total</th>
+        <th >Percentage</th>
+        <th >Remove</th>
+      </tr>
+<%= form_with model: @student do |form| %>
+      <tr>
+        <td>Nishant chauhan</td>
+        <td>1</td>
+        <td><%=form.number_field :mathes, in: 1.0..100.0, step: 1%></td>
+        <td><%=form.number_field :science, in: 1.0..100.0, step: 1%></td>
+        <td><%=form.number_field :scirnce, in: 1.0..100.0, step: 1%></td>
+        <td>180</td>
+        <td>60%</td>
+        <td><a href="#">Remove</a></td>
+      </tr>
+
+      <tr>
+        <td>Madhav shrivastav</td>
+        <td>2</td>
+        <td><%=form.number_field :mathes, in: 1.0..100.0, step: 1%></td>
+        <td><%=form.number_field :science, in: 1.0..100.0, step: 1%></td>
+        <td><%=form.number_field :scirnce, in: 1.0..100.0, step: 1%></td>
+        <td>180</td>
+        <td>60%</td>
+        <td><a href="#">Remove</a></td>
+      </tr>
+      <% end %>
+    </table>
+ </div>
+
+  <div>
+    <table border= '2' style ="text-align :center">
+      <tr>
+        <th>Total student</th>
+        <th>Highest mark</th>
+        <th>Lowest mark</th>
+        <th>Avarage mark</th>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+    </table>
+  </div>

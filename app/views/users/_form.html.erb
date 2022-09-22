@@ -49,8 +49,24 @@
   </div>
 
   <div>
-    <%=form.label :address, style: "display: block"%>
-    <%=form.text_area :message, size: "70x5" %>
+    <%= form.label :address, style: "display: block"%>
+    <%= form.text_area :message, size: "70x5" %>
+  <div>
+    <%= form.label :city_and_state,  style: "color:DodgerBlue"%>
+    <select name="city_id" id="city_id">
+      <option value="3">bhavnagar</option>
+      <option value="1">surat</option>
+      <option value="2">baroda</option>
+      <option value="4">ahemdabad</option>
+      <option value="5">mumbai</option>
+    </select>
+  </div>
+
+  <div>
+    <%= form.label :add_image_file, style: "display: block;color:DodgerBlue"%>
+    <%= form.file_field :picture %>
+  </div>
+
 
   <div>
     <%= form.submit %>
