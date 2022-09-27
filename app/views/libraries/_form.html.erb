@@ -1,0 +1,25 @@
+<div>Listing</h1>
+<%= form_with(model: library) do |form| %>
+
+<div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :age, style: "display: block" %>
+    <%= form.text_field :age %>
+  </div>
+
+  <div>
+    <%= form.label :address, style: "display: block" %>
+    <%= form.text_field :name %>
+
+    <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+  </div>
+
+
+

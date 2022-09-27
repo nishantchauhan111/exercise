@@ -5,7 +5,20 @@ Rails.application.routes.draw do
   end
   resources :students
 
-  root "students#index"
+  resources :demos
+
+
+
+get 'libraries', to: 'libraries#index', as: 'libraries'
+get 'libraries/:id', to: 'libraries#show', as: 'library ' 
+get 'libraries/new', to: 'libraries#new', as: 'new_library'
+post 'libraries', to: 'library#create'
+
+
+
+  
+
+  #  get 'libraries/:id', to: 'libraries#show', as: 'library'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

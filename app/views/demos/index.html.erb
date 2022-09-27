@@ -1,0 +1,15 @@
+<h1>Listing</h1>
+
+
+<div id="demos">
+  <% @demos.each do |demo| %>
+    <%= render demo %>
+    <p>
+      <%= link_to "Show this name", demo %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to new_demo_path  do %>
+add name
+  <%end%>
